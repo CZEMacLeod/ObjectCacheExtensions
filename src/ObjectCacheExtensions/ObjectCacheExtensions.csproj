@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.Caching" Version="4.5.0-preview1-*" Condition="'$(TargetFramework)'=='netstandard2.0'" />
+    <PackageReference Include="System.ValueTuple" Version="4.4.0" Condition="'$(TargetFramework)'=='net461'" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime.Caching" Condition="'$(TargetFramework)'=='net461'" />
+  </ItemGroup>
+
+</Project>
